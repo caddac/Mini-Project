@@ -20,7 +20,7 @@ import axios from 'axios';
       return {redis_key: null}
     },
     mounted() {
-      axios.get('http://localhost:8080').then((r) => {
+      axios.get(process.env.VUE_APP_BACKEND_URL).then((r) => {
         console.log('got data from express', r)
         this.redis_key = r.data
       }).catch((e) => {

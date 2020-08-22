@@ -9,13 +9,15 @@ const redis = require('redis');
 const {promisify} = require("util");
 
 const {REDIS_HOST} = process.env;
-const client = redis.createClient({host: REDIS_HOST || 'localhost'});
+const client = redis.createClient({host: REDIS_HOST});
 //promisify redis using node
 const get = promisify(client.get).bind(client);
 const setnx = promisify(client.setnx).bind(client);
 
+//only required when used with the vue frontend as it runs on a different host
 var cors = require('cors');
 app.use(cors())
+
 const redis_key = "any key"
 const value_to_set = "a value"
 

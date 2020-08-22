@@ -6,6 +6,8 @@ yarn install
 ```
 
 ### Compiles and hot-reloads for development
+Run the backend only by using docker-compose as specified [here](https://github.com/caddac/Mini-Project#run-the-express-project-with-docker-compose-recommended)  
+Then from this directory run:
 ```
 yarn run serve
 ```
@@ -13,11 +15,6 @@ yarn run serve
 ### Compiles and minifies for production
 ```
 yarn run build
-```
-
-### Run your tests
-```
-yarn run test
 ```
 
 ### Lints and fixes files
