@@ -1,0 +1,22 @@
+version: "3"
+services:
+  redis:
+    image: redis:6.0.6
+    networks:
+      - mp_network
+    ports:
+    - 6379:6379
+
+  web:
+    build:
+      context: express
+    depends_on:
+      - redis
+    ports:
+    - 9001:8080
+    environment:
+      REDIS_HOST: redis
+    networks:
+      - mp_network
+networks:
+  mp_network:
