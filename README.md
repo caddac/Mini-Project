@@ -6,6 +6,9 @@ The express API stores and retrieves a value from Redis when the root URI is acc
 Whichever configuration you run (with or without Vue.js frontend), the main site is exposed at http://localhost:9001. 
 
 I've provided compose files to run the application with or without the vue front end. 
+### Prerequisites
+* [Docker](https://docs.docker.com/get-docker/)
+* [Docker Compose](https://docs.docker.com/compose/install/)
 
 ## Express API only
 From this directory, run:
