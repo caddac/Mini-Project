@@ -53,3 +53,4 @@ You can clean up with:
     docker kill mini_redis mini_web
     docker rm mini_redis mini_web
     docker rmi k_express
+    docker network remove k_net
